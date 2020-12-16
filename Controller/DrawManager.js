@@ -238,13 +238,13 @@ function drawIntro() {
   
   push()
   const drawText = "Draw your music path (left click + drag)"
-  const drawSize = drawText.length * 8
+  const drawSize = drawText.length * 11
   noStroke()
-  rect(windowWidth/2 - drawSize/2, startY - 30, drawSize, 25, 20);
+  rect(windowWidth/2 - drawSize/2, startY - 35, drawSize, 30, 20);
   
   textAlign(CENTER)
   textFont(defaultFont)
-  textSize(windowHeight/60)
+  textSize(windowHeight/45)
   text(drawText, windowWidth/2, startY - 15)
   pop()
   
@@ -260,13 +260,13 @@ function drawIntro() {
  
   push()
   const demoText = "Demo Mode - Play Music"
-  const demoSize = demoText.length * 8
+  const demoSize = demoText.length * 12
   noStroke()
-  rect(startX - demoSize/2, startY*4 - 15, demoSize, 25, 20);
+  rect(startX - demoSize/2, startY*4 - 25, demoSize, 40, 20);
   
   textFont(defaultFont)
   textAlign(CENTER)
-  textSize(windowHeight/60)
+  textSize(windowHeight/45)
   text(demoText, startX, startY*4)
   pop()
   
@@ -274,13 +274,13 @@ function drawIntro() {
   
   push()
   const guitarText = "Guitar Mode - Play Chords"
-  const guitarSize = guitarText.length * 8
+  const guitarSize = guitarText.length * 15
   noStroke()
-  rect(startX*3 - guitarSize/2, startY*4 - 15, guitarSize, 25, 20);
+  rect(startX*3 - guitarSize/2, startY*4 - 25, guitarSize, 40, 20);
   
   textFont(defaultFont)
   textAlign(CENTER)
-  textSize(windowHeight/60)
+  textSize(windowHeight/45)
   text(guitarText, startX*3, startY*4)
   pop()
   
@@ -288,13 +288,14 @@ function drawIntro() {
   
   push()
   const enterText = "Guitar Mode - Play Chords"
-  const enterSize = guitarText.length * 8
+  const enterSize = guitarText.length * 15
   noStroke()
-  rect(windowWidth/2 - enterSize/2, windowHeight*14/15 - 15, enterSize, 25, 20);
+  rect(windowWidth/2 - enterSize/2, windowHeight*14/15 - 25, enterSize, 35, 20);
   
   textFont(defaultFont)
   textAlign(CENTER)
-  text("Press Enter to Start", windowWidth/2, windowHeight*14/15)
+  textSize(windowHeight/45)
+  text("Press 'Enter' to Start", windowWidth/2, windowHeight*14/15)
   pop()
   
 }

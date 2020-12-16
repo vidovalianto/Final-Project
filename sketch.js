@@ -39,7 +39,7 @@ function preload() {
   drawImg = createImg("Assets/draw.gif");
   // dragImg = createImg("Assets/drag.gif");
   guitarImg = createImg("Assets/guitar.gif");
-  bg = loadImage('Assets/bg.jpg');
+  bg = loadImage('Assets/bg.png');
   lineImg = loadImage('Assets/line.png');
 
 }
@@ -67,7 +67,7 @@ function draw() {
 
   if (playerController.state === state[2]) {
     background(bg)
-    background('#e7d6b6')
+    // background('#f5c887')
     drawIntro()
   } else {
     cnv.position(cnvX, cnvY)
@@ -96,8 +96,6 @@ function draw() {
       strings[moveString].x = mouseX
     }
     
-    
-
     const isInCanvas = mouseY < height && mouseY > 0 && mouseX > 0 && mouseX < width
     if (mouseIsPressed === true && isInCanvas) {
       // if (curLine.length == 0) {
@@ -119,7 +117,7 @@ function draw() {
 
         line(mouseX, mouseY, pmouseX, pmouseY);
       }
-    } else if (curLine.length > 0) {
+    } else if (curLine.length > 1) {
       lines.push(curLine)
 
       if (lines.length != 0) {
@@ -240,7 +238,7 @@ function keyPressed() {
     cnv = createCanvas(min(500, windowWidth / 2), max(200, windowHeight * 3 / 4))
     cnvX = windowWidth / (windowWidth < 1200 ? 15 : 3.5)
     cnvY = windowHeight / 6
-    background(231, 214, 182)
+    background('#f5c887')
     drawImg.remove()
     guitarImg.remove()
     demoImg.remove()
